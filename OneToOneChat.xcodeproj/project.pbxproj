@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A2FF4EA1B80C85C85A6817E /* Pods_OneToOneChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB37AAEEB984ED33C7C4A59 /* Pods_OneToOneChatUITests.framework */; };
+		8E18F3FC222C28620085DC7D /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */; };
+		8E18F3FF222C33790085DC7D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18F3FE222C33790085DC7D /* User.swift */; };
+		8E21DAEF222AD46400FB804B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DAEE222AD46400FB804B /* AppDelegate.swift */; };
+		8E21DAF4222AD46400FB804B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E21DAF2222AD46400FB804B /* Main.storyboard */; };
+		8E21DAF7222AD46400FB804B /* OneToOneChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DAF5222AD46400FB804B /* OneToOneChat.xcdatamodeld */; };
+		8E21DAF9222AD46500FB804B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E21DAF8222AD46500FB804B /* Assets.xcassets */; };
+		8E21DAFC222AD46500FB804B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E21DAFA222AD46500FB804B /* LaunchScreen.storyboard */; };
+		8E21DB07222AD46600FB804B /* OneToOneChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB06222AD46600FB804B /* OneToOneChatTests.swift */; };
+		8E21DB12222AD46600FB804B /* OneToOneChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB11222AD46600FB804B /* OneToOneChatUITests.swift */; };
+		8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB1F222AD56B00FB804B /* MessageViewController.swift */; };
+		8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB22222AD6EC00FB804B /* LoginViewController.swift */; };
+		8E4E26F8223418EB007BEB94 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E26F7223418EB007BEB94 /* .gitignore */; };
+		8EAEFBB2222B956600B7871F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */; };
+		9591EA9A27B7BF2A42BEFF46 /* Pods_OneToOneChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7925C9F90D50AEAB98914A /* Pods_OneToOneChatTests.framework */; };
+		F8CB605C49429AE3DDBE51A4 /* Pods_OneToOneChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A63C55A82594DC750CB20A2 /* Pods_OneToOneChat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E21DB03222AD46600FB804B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E21DAE3222AD46400FB804B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E21DAEA222AD46400FB804B;
+			remoteInfo = OneToOneChat;
+		};
+		8E21DB0E222AD46600FB804B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E21DAE3222AD46400FB804B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E21DAEA222AD46400FB804B;
+			remoteInfo = OneToOneChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26DB86BD0A463A2496C2640E /* Pods-OneToOneChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChat/Pods-OneToOneChat.debug.xcconfig"; sourceTree = "<group>"; };
+		5DB97A8DD2128F75D1A38735 /* Pods-OneToOneChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatUITests/Pods-OneToOneChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A63C55A82594DC750CB20A2 /* Pods_OneToOneChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneToOneChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
+		8E18F3FE222C33790085DC7D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = OneToOneChat/Controller/User.swift; sourceTree = SOURCE_ROOT; };
+		8E21DAEB222AD46400FB804B /* OneToOneChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneToOneChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E21DAEE222AD46400FB804B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E21DAF3222AD46400FB804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E21DAF6222AD46400FB804B /* OneToOneChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneToOneChat.xcdatamodel; sourceTree = "<group>"; };
+		8E21DAF8222AD46500FB804B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E21DAFB222AD46500FB804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E21DAFD222AD46500FB804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E21DB02222AD46600FB804B /* OneToOneChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneToOneChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E21DB06222AD46600FB804B /* OneToOneChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToOneChatTests.swift; sourceTree = "<group>"; };
+		8E21DB08222AD46600FB804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E21DB0D222AD46600FB804B /* OneToOneChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneToOneChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E21DB11222AD46600FB804B /* OneToOneChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToOneChatUITests.swift; sourceTree = "<group>"; };
+		8E21DB13222AD46600FB804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E21DB1F222AD56B00FB804B /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = "../New Group/MessageViewController.swift"; sourceTree = "<group>"; };
+		8E21DB22222AD6EC00FB804B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E4E26F7223418EB007BEB94 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F938F0FEE763387AE63AD59 /* Pods-OneToOneChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatTests/Pods-OneToOneChatTests.release.xcconfig"; sourceTree = "<group>"; };
+		9EB37AAEEB984ED33C7C4A59 /* Pods_OneToOneChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneToOneChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F3F0BA9A74B2978E612896 /* Pods-OneToOneChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChat/Pods-OneToOneChat.release.xcconfig"; sourceTree = "<group>"; };
+		CBE331B11E9B80CA44AAB742 /* Pods-OneToOneChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatUITests/Pods-OneToOneChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E935B3126F7C6A80F93D292A /* Pods-OneToOneChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatTests/Pods-OneToOneChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD7925C9F90D50AEAB98914A /* Pods_OneToOneChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneToOneChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E21DAE8222AD46400FB804B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8CB605C49429AE3DDBE51A4 /* Pods_OneToOneChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E21DAFF222AD46600FB804B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9591EA9A27B7BF2A42BEFF46 /* Pods_OneToOneChatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E21DB0A222AD46600FB804B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2FF4EA1B80C85C85A6817E /* Pods_OneToOneChatUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F15BC7075FC97710DD28750 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26DB86BD0A463A2496C2640E /* Pods-OneToOneChat.debug.xcconfig */,
+				B8F3F0BA9A74B2978E612896 /* Pods-OneToOneChat.release.xcconfig */,
+				E935B3126F7C6A80F93D292A /* Pods-OneToOneChatTests.debug.xcconfig */,
+				8F938F0FEE763387AE63AD59 /* Pods-OneToOneChatTests.release.xcconfig */,
+				5DB97A8DD2128F75D1A38735 /* Pods-OneToOneChatUITests.debug.xcconfig */,
+				CBE331B11E9B80CA44AAB742 /* Pods-OneToOneChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E18F3FD222C336C0085DC7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E18F3FE222C33790085DC7D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E21DAE2222AD46400FB804B = {
+			isa = PBXGroup;
+			children = (
+				8E21DAED222AD46400FB804B /* OneToOneChat */,
+				8E21DB05222AD46600FB804B /* OneToOneChatTests */,
+				8E21DB10222AD46600FB804B /* OneToOneChatUITests */,
+				8E21DAEC222AD46400FB804B /* Products */,
+				6F15BC7075FC97710DD28750 /* Pods */,
+				C8FDDCD066F69BA3F1D170B7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E21DAEC222AD46400FB804B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E21DAEB222AD46400FB804B /* OneToOneChat.app */,
+				8E21DB02222AD46600FB804B /* OneToOneChatTests.xctest */,
+				8E21DB0D222AD46600FB804B /* OneToOneChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E21DAED222AD46400FB804B /* OneToOneChat */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E26F6223418D3007BEB94 /* Git */,
+				8E18F3FD222C336C0085DC7D /* Model */,
+				8E21DB21222AD6BB00FB804B /* Controller */,
+				8E21DAEE222AD46400FB804B /* AppDelegate.swift */,
+				8E21DAF2222AD46400FB804B /* Main.storyboard */,
+				8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */,
+				8E21DAF8222AD46500FB804B /* Assets.xcassets */,
+				8E21DAFA222AD46500FB804B /* LaunchScreen.storyboard */,
+				8E21DAFD222AD46500FB804B /* Info.plist */,
+				8E21DAF5222AD46400FB804B /* OneToOneChat.xcdatamodeld */,
+			);
+			path = OneToOneChat;
+			sourceTree = "<group>";
+		};
+		8E21DB05222AD46600FB804B /* OneToOneChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E21DB06222AD46600FB804B /* OneToOneChatTests.swift */,
+				8E21DB08222AD46600FB804B /* Info.plist */,
+			);
+			path = OneToOneChatTests;
+			sourceTree = "<group>";
+		};
+		8E21DB10222AD46600FB804B /* OneToOneChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E21DB11222AD46600FB804B /* OneToOneChatUITests.swift */,
+				8E21DB13222AD46600FB804B /* Info.plist */,
+			);
+			path = OneToOneChatUITests;
+			sourceTree = "<group>";
+		};
+		8E21DB21222AD6BB00FB804B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E21DB1F222AD56B00FB804B /* MessageViewController.swift */,
+				8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */,
+				8E21DB22222AD6EC00FB804B /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E4E26F6223418D3007BEB94 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				8E4E26F7223418EB007BEB94 /* .gitignore */,
+			);
+			path = Git;
+			sourceTree = "<group>";
+		};
+		C8FDDCD066F69BA3F1D170B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A63C55A82594DC750CB20A2 /* Pods_OneToOneChat.framework */,
+				FD7925C9F90D50AEAB98914A /* Pods_OneToOneChatTests.framework */,
+				9EB37AAEEB984ED33C7C4A59 /* Pods_OneToOneChatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E21DAEA222AD46400FB804B /* OneToOneChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E21DB16222AD46600FB804B /* Build configuration list for PBXNativeTarget "OneToOneChat" */;
+			buildPhases = (
+				FF1BD25495E46406E6BC2E3B /* [CP] Check Pods Manifest.lock */,
+				8E21DAE7222AD46400FB804B /* Sources */,
+				8E21DAE8222AD46400FB804B /* Frameworks */,
+				8E21DAE9222AD46400FB804B /* Resources */,
+				23EEB667FFD0BBCEAD200ED9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneToOneChat;
+			productName = OneToOneChat;
+			productReference = 8E21DAEB222AD46400FB804B /* OneToOneChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E21DB01222AD46600FB804B /* OneToOneChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E21DB19222AD46600FB804B /* Build configuration list for PBXNativeTarget "OneToOneChatTests" */;
+			buildPhases = (
+				1D1C93D63A40580BCA28FD52 /* [CP] Check Pods Manifest.lock */,
+				8E21DAFE222AD46600FB804B /* Sources */,
+				8E21DAFF222AD46600FB804B /* Frameworks */,
+				8E21DB00222AD46600FB804B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E21DB04222AD46600FB804B /* PBXTargetDependency */,
+			);
+			name = OneToOneChatTests;
+			productName = OneToOneChatTests;
+			productReference = 8E21DB02222AD46600FB804B /* OneToOneChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E21DB0C222AD46600FB804B /* OneToOneChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E21DB1C222AD46600FB804B /* Build configuration list for PBXNativeTarget "OneToOneChatUITests" */;
+			buildPhases = (
+				0168A3D87DBAF84FA4B44818 /* [CP] Check Pods Manifest.lock */,
+				8E21DB09222AD46600FB804B /* Sources */,
+				8E21DB0A222AD46600FB804B /* Frameworks */,
+				8E21DB0B222AD46600FB804B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E21DB0F222AD46600FB804B /* PBXTargetDependency */,
+			);
+			name = OneToOneChatUITests;
+			productName = OneToOneChatUITests;
+			productReference = 8E21DB0D222AD46600FB804B /* OneToOneChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E21DAE3222AD46400FB804B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Prabhakar G";
+				TargetAttributes = {
+					8E21DAEA222AD46400FB804B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					8E21DB01222AD46600FB804B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8E21DAEA222AD46400FB804B;
+					};
+					8E21DB0C222AD46600FB804B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 8E21DAEA222AD46400FB804B;
+					};
+				};
+			};
+			buildConfigurationList = 8E21DAE6222AD46400FB804B /* Build configuration list for PBXProject "OneToOneChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E21DAE2222AD46400FB804B;
+			productRefGroup = 8E21DAEC222AD46400FB804B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E21DAEA222AD46400FB804B /* OneToOneChat */,
+				8E21DB01222AD46600FB804B /* OneToOneChatTests */,
+				8E21DB0C222AD46600FB804B /* OneToOneChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E21DAE9222AD46400FB804B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4E26F8223418EB007BEB94 /* .gitignore in Resources */,
+				8E21DAFC222AD46500FB804B /* LaunchScreen.storyboard in Resources */,
+				8EAEFBB2222B956600B7871F /* GoogleService-Info.plist in Resources */,
+				8E21DAF9222AD46500FB804B /* Assets.xcassets in Resources */,
+				8E21DAF4222AD46400FB804B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E21DB00222AD46600FB804B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E21DB0B222AD46600FB804B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0168A3D87DBAF84FA4B44818 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneToOneChatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D1C93D63A40580BCA28FD52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneToOneChatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23EEB667FFD0BBCEAD200ED9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OneToOneChat/Pods-OneToOneChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneToOneChat/Pods-OneToOneChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF1BD25495E46406E6BC2E3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneToOneChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E21DAE7222AD46400FB804B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */,
+				8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */,
+				8E18F3FF222C33790085DC7D /* User.swift in Sources */,
+				8E18F3FC222C28620085DC7D /* NewMessageViewController.swift in Sources */,
+				8E21DAEF222AD46400FB804B /* AppDelegate.swift in Sources */,
+				8E21DAF7222AD46400FB804B /* OneToOneChat.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E21DAFE222AD46600FB804B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E21DB07222AD46600FB804B /* OneToOneChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E21DB09222AD46600FB804B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E21DB12222AD46600FB804B /* OneToOneChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E21DB04222AD46600FB804B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E21DAEA222AD46400FB804B /* OneToOneChat */;
+			targetProxy = 8E21DB03222AD46600FB804B /* PBXContainerItemProxy */;
+		};
+		8E21DB0F222AD46600FB804B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E21DAEA222AD46400FB804B /* OneToOneChat */;
+			targetProxy = 8E21DB0E222AD46600FB804B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E21DAF2222AD46400FB804B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E21DAF3222AD46400FB804B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E21DAFA222AD46500FB804B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E21DAFB222AD46500FB804B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E21DB14222AD46600FB804B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E21DB15222AD46600FB804B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E21DB17222AD46600FB804B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26DB86BD0A463A2496C2640E /* Pods-OneToOneChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG3WAQGRWG;
+				INFOPLIST_FILE = OneToOneChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prabhakar.OneToOneChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E21DB18222AD46600FB804B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8F3F0BA9A74B2978E612896 /* Pods-OneToOneChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG3WAQGRWG;
+				INFOPLIST_FILE = OneToOneChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Prabhakar.OneToOneChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E21DB1A222AD46600FB804B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E935B3126F7C6A80F93D292A /* Pods-OneToOneChatTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG3WAQGRWG;
+				INFOPLIST_FILE = OneToOneChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Prabhakar-G.OneToOneChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneToOneChat.app/OneToOneChat";
+			};
+			name = Debug;
+		};
+		8E21DB1B222AD46600FB804B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F938F0FEE763387AE63AD59 /* Pods-OneToOneChatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG3WAQGRWG;
+				INFOPLIST_FILE = OneToOneChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Prabhakar-G.OneToOneChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OneToOneChat.app/OneToOneChat";
+			};
+			name = Release;
+		};
+		8E21DB1D222AD46600FB804B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB97A8DD2128F75D1A38735 /* Pods-OneToOneChatUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG3WAQGRWG;
+				INFOPLIST_FILE = OneToOneChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Prabhakar-G.OneToOneChatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OneToOneChat;
+			};
+			name = Debug;
+		};
+		8E21DB1E222AD46600FB804B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE331B11E9B80CA44AAB742 /* Pods-OneToOneChatUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KG3WAQGRWG;
+				INFOPLIST_FILE = OneToOneChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Prabhakar-G.OneToOneChatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OneToOneChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E21DAE6222AD46400FB804B /* Build configuration list for PBXProject "OneToOneChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E21DB14222AD46600FB804B /* Debug */,
+				8E21DB15222AD46600FB804B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E21DB16222AD46600FB804B /* Build configuration list for PBXNativeTarget "OneToOneChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E21DB17222AD46600FB804B /* Debug */,
+				8E21DB18222AD46600FB804B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E21DB19222AD46600FB804B /* Build configuration list for PBXNativeTarget "OneToOneChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E21DB1A222AD46600FB804B /* Debug */,
+				8E21DB1B222AD46600FB804B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E21DB1C222AD46600FB804B /* Build configuration list for PBXNativeTarget "OneToOneChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E21DB1D222AD46600FB804B /* Debug */,
+				8E21DB1E222AD46600FB804B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8E21DAF5222AD46400FB804B /* OneToOneChat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8E21DAF6222AD46400FB804B /* OneToOneChat.xcdatamodel */,
+			);
+			currentVersion = 8E21DAF6222AD46400FB804B /* OneToOneChat.xcdatamodel */;
+			path = OneToOneChat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8E21DAE3222AD46400FB804B /* Project object */;
+}
