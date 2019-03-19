@@ -19,6 +19,7 @@
 		8E21DB12222AD46600FB804B /* OneToOneChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB11222AD46600FB804B /* OneToOneChatUITests.swift */; };
 		8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB1F222AD56B00FB804B /* MessageViewController.swift */; };
 		8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB22222AD6EC00FB804B /* LoginViewController.swift */; };
+		8E40727F2234B310006FD23C /* UIImageView+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40727E2234B310006FD23C /* UIImageView+Caching.swift */; };
 		8E4E26F8223418EB007BEB94 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E26F7223418EB007BEB94 /* .gitignore */; };
 		8EAEFBB2222B956600B7871F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */; };
 		9591EA9A27B7BF2A42BEFF46 /* Pods_OneToOneChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7925C9F90D50AEAB98914A /* Pods_OneToOneChatTests.framework */; };
@@ -63,6 +64,7 @@
 		8E21DB13222AD46600FB804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E21DB1F222AD56B00FB804B /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = "../New Group/MessageViewController.swift"; sourceTree = "<group>"; };
 		8E21DB22222AD6EC00FB804B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E40727E2234B310006FD23C /* UIImageView+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Caching.swift"; sourceTree = "<group>"; };
 		8E4E26F7223418EB007BEB94 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F938F0FEE763387AE63AD59 /* Pods-OneToOneChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatTests/Pods-OneToOneChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		8E21DAED222AD46400FB804B /* OneToOneChat */ = {
 			isa = PBXGroup;
 			children = (
+				8E40727D2234B2D3006FD23C /* Helpers */,
 				8E4E26F6223418D3007BEB94 /* Git */,
 				8E18F3FD222C336C0085DC7D /* Model */,
 				8E21DB21222AD6BB00FB804B /* Controller */,
@@ -187,6 +190,14 @@
 				8E21DB22222AD6EC00FB804B /* LoginViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E40727D2234B2D3006FD23C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E40727E2234B310006FD23C /* UIImageView+Caching.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		8E4E26F6223418D3007BEB94 /* Git */ = {
@@ -428,6 +439,7 @@
 				8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */,
 				8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */,
 				8E18F3FF222C33790085DC7D /* User.swift in Sources */,
+				8E40727F2234B310006FD23C /* UIImageView+Caching.swift in Sources */,
 				8E18F3FC222C28620085DC7D /* NewMessageViewController.swift in Sources */,
 				8E21DAEF222AD46400FB804B /* AppDelegate.swift in Sources */,
 				8E21DAF7222AD46400FB804B /* OneToOneChat.xcdatamodeld in Sources */,

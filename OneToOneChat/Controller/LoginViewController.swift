@@ -215,7 +215,6 @@ class LoginViewController: UIViewController {
         }
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error != nil {
-                print(error)
                 return
             }
             
@@ -225,7 +224,7 @@ class LoginViewController: UIViewController {
             
            
             let uploadData = self.headerImageView.image!.pngData()
-            var storageRef = Storage.storage().reference().child("myImage.png")
+            let storageRef = Storage.storage().reference().child("\(uid).png")
             storageRef.putData(uploadData!, metadata: nil) { (metaData, error) in
                 storageRef.downloadURL(completion: { (url, error) in
                     if let urlText = url?.absoluteString {
