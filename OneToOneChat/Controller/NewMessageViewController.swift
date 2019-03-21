@@ -14,7 +14,8 @@ class NewMessageViewController: UITableViewController {
     
     let cellId = "cellId"
     var users = [User]()
-    
+    var messageViewController: MessageViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(handleCancel))
@@ -26,6 +27,7 @@ class NewMessageViewController: UITableViewController {
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
             if let snapshots = snapshot.value as? [String: AnyObject] {
                 let user = User()
+                user.id = snapshot.key
                 user.setValuesForKeys(snapshots)
                 self.users.append(user)
                
@@ -57,6 +59,13 @@ class NewMessageViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        dismiss(animated: true) { [unowned self] in
+            self.messageViewController?.showChatPageFor(user)
+        }
     }
 }
 
@@ -92,5 +101,7 @@ class UserCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
 }

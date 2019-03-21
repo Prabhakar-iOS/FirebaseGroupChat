@@ -12,6 +12,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
+    
     var inputContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -85,6 +86,7 @@ class LoginViewController: UIViewController {
         imageView.isUserInteractionEnabled = true
         return imageView
     }()
+    var messageViewController: MessageViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -202,7 +204,7 @@ class LoginViewController: UIViewController {
                 print(error)
                 return
             }
-            
+            self.messageViewController?.fetchUserAndSetupNavBar()
             self.dismiss(animated: true, completion: nil)
             
         }
@@ -222,8 +224,7 @@ class LoginViewController: UIViewController {
                 return
             }
             
-           
-            let uploadData = self.headerImageView.image!.pngData()
+            let uploadData = self.headerImageView.image!.jpegData(compressionQuality: 0.1)
             let storageRef = Storage.storage().reference().child("\(uid).png")
             storageRef.putData(uploadData!, metadata: nil) { (metaData, error) in
                 storageRef.downloadURL(completion: { (url, error) in
@@ -247,7 +248,9 @@ class LoginViewController: UIViewController {
             if error != nil {
                 return
             }
-            
+            let user = User()
+            user.setValuesForKeys(values)
+            self.messageViewController?.setupNavBar(user: user)
             self.dismiss(animated: true, completion: nil)
         })
         
