@@ -22,6 +22,8 @@
 		8E40727F2234B310006FD23C /* UIImageView+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40727E2234B310006FD23C /* UIImageView+Caching.swift */; };
 		8E4E26F8223418EB007BEB94 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E26F7223418EB007BEB94 /* .gitignore */; };
 		8EAEFBB2222B956600B7871F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */; };
+		8EF3B770223E56BD00D4E634 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B76F223E56BD00D4E634 /* ChatLogController.swift */; };
+		8EF3B772223E809800D4E634 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B771223E809800D4E634 /* Message.swift */; };
 		9591EA9A27B7BF2A42BEFF46 /* Pods_OneToOneChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7925C9F90D50AEAB98914A /* Pods_OneToOneChatTests.framework */; };
 		F8CB605C49429AE3DDBE51A4 /* Pods_OneToOneChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A63C55A82594DC750CB20A2 /* Pods_OneToOneChat.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		8E40727E2234B310006FD23C /* UIImageView+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Caching.swift"; sourceTree = "<group>"; };
 		8E4E26F7223418EB007BEB94 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EF3B76F223E56BD00D4E634 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		8EF3B771223E809800D4E634 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8F938F0FEE763387AE63AD59 /* Pods-OneToOneChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatTests/Pods-OneToOneChatTests.release.xcconfig"; sourceTree = "<group>"; };
 		9EB37AAEEB984ED33C7C4A59 /* Pods_OneToOneChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneToOneChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8F3F0BA9A74B2978E612896 /* Pods-OneToOneChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChat/Pods-OneToOneChat.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8E18F3FE222C33790085DC7D /* User.swift */,
+				8EF3B771223E809800D4E634 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				8E21DB1F222AD56B00FB804B /* MessageViewController.swift */,
 				8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */,
 				8E21DB22222AD6EC00FB804B /* LoginViewController.swift */,
+				8EF3B76F223E56BD00D4E634 /* ChatLogController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,8 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF3B770223E56BD00D4E634 /* ChatLogController.swift in Sources */,
 				8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */,
 				8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */,
+				8EF3B772223E809800D4E634 /* Message.swift in Sources */,
 				8E18F3FF222C33790085DC7D /* User.swift in Sources */,
 				8E40727F2234B310006FD23C /* UIImageView+Caching.swift in Sources */,
 				8E18F3FC222C28620085DC7D /* NewMessageViewController.swift in Sources */,
