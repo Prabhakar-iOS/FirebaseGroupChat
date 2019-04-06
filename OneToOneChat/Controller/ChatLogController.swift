@@ -14,7 +14,7 @@ class ChatLogController: UIViewController, UITextFieldDelegate {
     
     var user: User? {
         didSet {
-            self.navigationItem.title = user?.name
+            self.navigationItem.title = user?.name ?? ""
         }
     }
     
@@ -79,7 +79,21 @@ class ChatLogController: UIViewController, UITextFieldDelegate {
         let fromId = Auth.auth().currentUser?.uid
         let timeStamp: Int = Int(Date().timeIntervalSince1970)
         let value = ["text": inputTextField.text!, "toId": toId!, "fromId": fromId!, "timeStamp": timeStamp] as [String : Any]
-        childRef.updateChildValues(value)
+        
+        childRef.updateChildValues(value) { (error, ref) in
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            let secondRef = Database.database().reference().child("user-messages")
+            let secondChildRef = secondRef.child(fromId!)
+            let messageId = ref.key
+            let messageValue = [messageId: 1]
+            
+            secondChildRef.updateChildValues(messageValue)
+            
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
