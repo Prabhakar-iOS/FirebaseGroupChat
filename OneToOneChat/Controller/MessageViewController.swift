@@ -17,6 +17,7 @@ class MessageViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hello")
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         tableView.register(UserCell.self, forCellReuseIdentifier: "cellId")
         let menuBtn = UIButton(type: .custom)
