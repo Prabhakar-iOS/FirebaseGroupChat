@@ -10,13 +10,37 @@ import Foundation
 import UIKit
 import Firebase
 
-class ChatLogController: UIViewController, UITextFieldDelegate {
+class ChatLogController: UICollectionViewController, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
     
     var user: User? {
         didSet {
-            self.navigationItem.title = user?.name
+            self.navigationItem.title = user?.name ?? ""
+            observeMessages()
         }
     }
+    
+    var messages = [Message]()
+    
+    func observeMessages() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let ref = Database.database().reference().child("user-messages").child(uid)
+        ref.observe(.childAdded) { snapshot in
+            let messageRef = Database.database().reference().child("messages").child(snapshot.key)
+            messageRef.observe(.value, with: { (snap) in
+                guard let dictionary = snap.value as? [String: AnyObject] else { return }
+                let message = Message()
+                message.setValuesForKeys(dictionary)
+                if message.chatPartnerId() == self.user?.id {
+                    self.messages.append(message)
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
+                }
+            })
+        }
+    }
+    
+    let cellId = "cellId"
     
     lazy var inputTextField: UITextField  = {
         let textField = UITextField()
@@ -28,14 +52,16 @@ class ChatLogController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        collectionView.register(MessageCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.backgroundColor = .white
         setupMessageInputContainer()
+        collectionView.alwaysBounceVertical = true
     }
     
     func setupMessageInputContainer() {
         let containerView = UIView()
+        containerView.backgroundColor = .white
         self.view.addSubview(containerView)
-        ///containerView.backgroundColor = .red
-        
         containerView.translatesAutoresizingMaskIntoConstraints = false
         containerView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
@@ -69,7 +95,20 @@ class ChatLogController: UIViewController, UITextFieldDelegate {
         separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
-        
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MessageCollectionViewCell
+        cell.textView.text = messages[indexPath.row].text
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width, height: 50)
     }
     
     @objc func handleSend() {
@@ -79,7 +118,26 @@ class ChatLogController: UIViewController, UITextFieldDelegate {
         let fromId = Auth.auth().currentUser?.uid
         let timeStamp: Int = Int(Date().timeIntervalSince1970)
         let value = ["text": inputTextField.text!, "toId": toId!, "fromId": fromId!, "timeStamp": timeStamp] as [String : Any]
-        childRef.updateChildValues(value)
+        
+        childRef.updateChildValues(value) { (error, ref) in
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            let secondRef = Database.database().reference().child("user-messages")
+            let secondChildRef = secondRef.child(fromId!)
+            let messageId = ref.key
+            let messageValue = [messageId: 1]
+            
+            secondChildRef.updateChildValues(messageValue)
+            
+            let recepientRef = Database.database().reference().child("user-messages")
+            let secondRecepientRef = recepientRef.child(toId!)
+            
+            secondRecepientRef.updateChildValues(messageValue)
+            
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

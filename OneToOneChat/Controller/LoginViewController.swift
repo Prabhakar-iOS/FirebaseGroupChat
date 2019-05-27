@@ -241,7 +241,7 @@ class LoginViewController: UIViewController {
     }
     
     private func registerUserWith(uid: String, values: [String: String]) {
-        let ref = Database.database().reference(fromURL: "https://onetoonechat-7e762.firebaseio.com/")
+        let ref = Database.database().reference()
         let updateRef = ref.child("users").child(uid)
         
         updateRef.updateChildValues(values, withCompletionBlock: { (error, ref) in

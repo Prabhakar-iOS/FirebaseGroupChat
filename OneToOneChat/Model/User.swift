@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class User: NSObject {
     @objc var id: String?

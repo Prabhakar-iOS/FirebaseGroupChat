@@ -50,7 +50,7 @@ class NewMessageViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         let user = users[indexPath.row]
         cell.textLabel?.text = user.name
-        
+
         cell.detailTextLabel?.text = user.email
         cell.profileImageView.loadImageFromUrlString(urlString: user.profileImageUrl)
         
@@ -70,6 +70,36 @@ class NewMessageViewController: UITableViewController {
 }
 
 class UserCell: UITableViewCell {
+    var message: Message? {
+        didSet {
+            setupNameAndProfileImage()
+            
+            detailTextLabel?.text = message?.text
+            
+            if let seconds = message?.timeStamp?.doubleValue {
+                let timeStampDate = Date(timeIntervalSince1970: seconds)
+                 let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "hh:mm:ss a"
+                timeLabel.text = dateFormatter.string(from: timeStampDate)
+                
+            }
+        }
+    }
+    
+    private func setupNameAndProfileImage() {
+
+        if let toId = message?.chatPartnerId() {
+            let ref = Database.database().reference().child("users").child(toId)
+            ref.observe(.value) { snapshot in
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    self.textLabel?.text = dictionary["name"] as? String
+                    if let profileImageUrl = dictionary["profileImageUrl"] as? String {
+                        self.profileImageView.loadImageFromUrlString(urlString: profileImageUrl)
+                    }
+                }
+            }
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -88,14 +118,26 @@ class UserCell: UITableViewCell {
         return imageView
     }()
     
+    var timeLabel: UILabel = {
+        let label = UILabel()
+        label.text = "00:00:00"
+        label.textColor = UIColor.lightGray
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
         addSubview(profileImageView)
-        
+        addSubview(timeLabel)
         profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
         profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        timeLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -5).isActive = true
+        timeLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
