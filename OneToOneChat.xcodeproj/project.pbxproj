@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4A2FF4EA1B80C85C85A6817E /* Pods_OneToOneChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB37AAEEB984ED33C7C4A59 /* Pods_OneToOneChatUITests.framework */; };
 		8E18F3FC222C28620085DC7D /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */; };
-		8E18F3FF222C33790085DC7D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E18F3FE222C33790085DC7D /* User.swift */; };
 		8E21DAEF222AD46400FB804B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DAEE222AD46400FB804B /* AppDelegate.swift */; };
 		8E21DAF4222AD46400FB804B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E21DAF2222AD46400FB804B /* Main.storyboard */; };
 		8E21DAF7222AD46400FB804B /* OneToOneChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DAF5222AD46400FB804B /* OneToOneChat.xcdatamodeld */; };
@@ -17,11 +16,13 @@
 		8E21DAFC222AD46500FB804B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E21DAFA222AD46500FB804B /* LaunchScreen.storyboard */; };
 		8E21DB07222AD46600FB804B /* OneToOneChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB06222AD46600FB804B /* OneToOneChatTests.swift */; };
 		8E21DB12222AD46600FB804B /* OneToOneChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB11222AD46600FB804B /* OneToOneChatUITests.swift */; };
-		8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB1F222AD56B00FB804B /* MessageViewController.swift */; };
 		8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E21DB22222AD6EC00FB804B /* LoginViewController.swift */; };
 		8E40727F2234B310006FD23C /* UIImageView+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40727E2234B310006FD23C /* UIImageView+Caching.swift */; };
 		8E4E26F8223418EB007BEB94 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8E4E26F7223418EB007BEB94 /* .gitignore */; };
 		8EAEFBB2222B956600B7871F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */; };
+		8EB4EE4C22588BA500D1CF29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4EE4B22588BA500D1CF29 /* User.swift */; };
+		8EB4EE4E22588BC400D1CF29 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4EE4D22588BC400D1CF29 /* MessageViewController.swift */; };
+		8EB4EE502258E32400D1CF29 /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB4EE4F2258E32400D1CF29 /* MessageCollectionViewCell.swift */; };
 		8EF3B770223E56BD00D4E634 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B76F223E56BD00D4E634 /* ChatLogController.swift */; };
 		8EF3B772223E809800D4E634 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3B771223E809800D4E634 /* Message.swift */; };
 		9591EA9A27B7BF2A42BEFF46 /* Pods_OneToOneChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7925C9F90D50AEAB98914A /* Pods_OneToOneChatTests.framework */; };
@@ -50,7 +51,6 @@
 		5DB97A8DD2128F75D1A38735 /* Pods-OneToOneChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatUITests/Pods-OneToOneChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A63C55A82594DC750CB20A2 /* Pods_OneToOneChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneToOneChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
-		8E18F3FE222C33790085DC7D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = OneToOneChat/Controller/User.swift; sourceTree = SOURCE_ROOT; };
 		8E21DAEB222AD46400FB804B /* OneToOneChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneToOneChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E21DAEE222AD46400FB804B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E21DAF3222AD46400FB804B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,11 +64,13 @@
 		8E21DB0D222AD46600FB804B /* OneToOneChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneToOneChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E21DB11222AD46600FB804B /* OneToOneChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneToOneChatUITests.swift; sourceTree = "<group>"; };
 		8E21DB13222AD46600FB804B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E21DB1F222AD56B00FB804B /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = "../New Group/MessageViewController.swift"; sourceTree = "<group>"; };
 		8E21DB22222AD6EC00FB804B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8E40727E2234B310006FD23C /* UIImageView+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Caching.swift"; sourceTree = "<group>"; };
 		8E4E26F7223418EB007BEB94 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8EAEFBB0222B956600B7871F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8EB4EE4B22588BA500D1CF29 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8EB4EE4D22588BC400D1CF29 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		8EB4EE4F2258E32400D1CF29 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8EF3B76F223E56BD00D4E634 /* ChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		8EF3B771223E809800D4E634 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8F938F0FEE763387AE63AD59 /* Pods-OneToOneChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneToOneChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneToOneChatTests/Pods-OneToOneChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +125,7 @@
 		8E18F3FD222C336C0085DC7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8E18F3FE222C33790085DC7D /* User.swift */,
+				8EB4EE4B22588BA500D1CF29 /* User.swift */,
 				8EF3B771223E809800D4E634 /* Message.swift */,
 			);
 			path = Model;
@@ -190,10 +192,11 @@
 		8E21DB21222AD6BB00FB804B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E21DB1F222AD56B00FB804B /* MessageViewController.swift */,
+				8EB4EE4D22588BC400D1CF29 /* MessageViewController.swift */,
 				8E18F3FB222C28620085DC7D /* NewMessageViewController.swift */,
 				8E21DB22222AD6EC00FB804B /* LoginViewController.swift */,
 				8EF3B76F223E56BD00D4E634 /* ChatLogController.swift */,
+				8EB4EE4F2258E32400D1CF29 /* MessageCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,12 +447,13 @@
 			files = (
 				8EF3B770223E56BD00D4E634 /* ChatLogController.swift in Sources */,
 				8E21DB23222AD6EC00FB804B /* LoginViewController.swift in Sources */,
-				8E21DB20222AD56B00FB804B /* MessageViewController.swift in Sources */,
 				8EF3B772223E809800D4E634 /* Message.swift in Sources */,
-				8E18F3FF222C33790085DC7D /* User.swift in Sources */,
+				8EB4EE4E22588BC400D1CF29 /* MessageViewController.swift in Sources */,
 				8E40727F2234B310006FD23C /* UIImageView+Caching.swift in Sources */,
 				8E18F3FC222C28620085DC7D /* NewMessageViewController.swift in Sources */,
+				8EB4EE502258E32400D1CF29 /* MessageCollectionViewCell.swift in Sources */,
 				8E21DAEF222AD46400FB804B /* AppDelegate.swift in Sources */,
+				8EB4EE4C22588BA500D1CF29 /* User.swift in Sources */,
 				8E21DAF7222AD46400FB804B /* OneToOneChat.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
