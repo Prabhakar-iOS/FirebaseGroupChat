@@ -103,8 +103,8 @@ class UserCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        textLabel?.frame = CGRect(x: 86, y: (textLabel?.frame.origin.y)! - 2, width: (textLabel?.frame.size.width)!, height: (textLabel?.frame.size.height)!)
-        detailTextLabel?.frame = CGRect(x: 86, y: (detailTextLabel?.frame.origin.y)! + 2, width: (detailTextLabel?.frame.size.width)!, height: (detailTextLabel?.frame.size.height)!)
+        textLabel?.frame = CGRect(x: 86, y: textLabel?.frame.origin.y ?? 0 - 2, width: textLabel?.frame.size.width ?? 0, height: textLabel?.frame.size.height ?? 0)
+        detailTextLabel?.frame = CGRect(x: 86, y: detailTextLabel?.frame.origin.y ?? 0 + 2, width: detailTextLabel?.frame.size.width ?? 0, height: detailTextLabel?.frame.size.height ?? 0)
     }
     
     var profileImageView: UIImageView = {
